@@ -7,12 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
-class ContactListViewModel {
+class ContactListViewModel: NSObject {
     private let service: ContactService
     
-    var onSuccess: (([Contact]) -> Void)?
+    private var rawContacts: [Contact] = []
+    private var contactCellData: [ContactListCellData] = []
+
     var onError: ((Error) -> Void)?
+    var onDataReceived: (() -> Void)?
     
     init(service: ContactService = NetworkContactService()) {
         self.service = service
@@ -23,10 +27,33 @@ class ContactListViewModel {
         service.fetchContactList { [weak self] result in
             switch result {
             case let .success(contacts):
-                self?.onSuccess?(contacts)
+                self?.rawContacts = contacts
+                self?.contactCellData = contacts.map {
+                    ContactListCellData(imageURL: $0.imageUrl, name: $0.name)
+                }
+                
+                self?.onDataReceived?()
             case let .failure(error):
                 self?.onError?(error)
             }
         }
+    }
+}
+
+extension ContactListViewModel: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contactCellData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellData = contactCellData[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: ContactListTableViewCell.reuseIdentifier) as! ContactListTableViewCell
+        cell.configureCell(with: cellData)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
