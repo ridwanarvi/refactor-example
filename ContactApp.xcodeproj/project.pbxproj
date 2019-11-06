@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9165400A2372F6E600739E60 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916540092372F6E600739E60 /* ContactService.swift */; };
+		9165400D2372FB3B00739E60 /* ContactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9165400C2372FB3B00739E60 /* ContactListViewModel.swift */; };
 		E5542014233C620100214B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5542013233C620100214B66 /* AppDelegate.swift */; };
 		E5542016233C620100214B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5542015233C620100214B66 /* SceneDelegate.swift */; };
 		E554201D233C620300214B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E554201C233C620300214B66 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		916540092372F6E600739E60 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
+		9165400C2372FB3B00739E60 /* ContactListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewModel.swift; sourceTree = "<group>"; };
 		E5542010233C620100214B66 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5542013233C620100214B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5542015233C620100214B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 				916540092372F6E600739E60 /* ContactService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9165400B2372FB2700739E60 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9165400C2372FB3B00739E60 /* ContactListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E5542007233C620100214B66 = {
@@ -79,6 +89,7 @@
 		E5542027233C635A00214B66 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				9165400B2372FB2700739E60 /* ViewModel */,
 				916540082372F6CE00739E60 /* Service */,
 				E5542031233C646900214B66 /* Cell */,
 				E5542029233C637000214B66 /* ViewController */,
@@ -204,6 +215,7 @@
 				9165400A2372F6E600739E60 /* ContactService.swift in Sources */,
 				E5542030233C646100214B66 /* ContactListViewController.swift in Sources */,
 				E5542014233C620100214B66 /* AppDelegate.swift in Sources */,
+				9165400D2372FB3B00739E60 /* ContactListViewModel.swift in Sources */,
 				E5542016233C620100214B66 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
