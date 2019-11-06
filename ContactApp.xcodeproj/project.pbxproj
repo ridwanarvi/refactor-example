@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9165400A2372F6E600739E60 /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916540092372F6E600739E60 /* ContactService.swift */; };
 		E5542014233C620100214B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5542013233C620100214B66 /* AppDelegate.swift */; };
 		E5542016233C620100214B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5542015233C620100214B66 /* SceneDelegate.swift */; };
 		E554201D233C620300214B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E554201C233C620300214B66 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		916540092372F6E600739E60 /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		E5542010233C620100214B66 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5542013233C620100214B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5542015233C620100214B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		916540082372F6CE00739E60 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				916540092372F6E600739E60 /* ContactService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		E5542007233C620100214B66 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		E5542027233C635A00214B66 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				916540082372F6CE00739E60 /* Service */,
 				E5542031233C646900214B66 /* Cell */,
 				E5542029233C637000214B66 /* ViewController */,
 				E5542028233C636600214B66 /* Models */,
@@ -190,6 +201,7 @@
 			files = (
 				E554202D233C642600214B66 /* Contact.swift in Sources */,
 				E5542033233C647600214B66 /* ContactListTableViewCell.swift in Sources */,
+				9165400A2372F6E600739E60 /* ContactService.swift in Sources */,
 				E5542030233C646100214B66 /* ContactListViewController.swift in Sources */,
 				E5542014233C620100214B66 /* AppDelegate.swift in Sources */,
 				E5542016233C620100214B66 /* SceneDelegate.swift in Sources */,
